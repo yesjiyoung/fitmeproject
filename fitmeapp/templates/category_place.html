@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>뚜비두밥메인페이지</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/common_cate.css">
+
+    <style>
+            
+        #bottom_category{
+            height: 50px;
+        }
+
+        #bottom_category ul {
+            list-style: none;
+        }
+
+        #bottom_category ul li{
+            float:left;
+            width:10%;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+            background-color: rgb(65, 105, 225, 0.4);
+            color: #fff;
+            /* border: 2px solid #4169e1; */
+            margin: 3px;
+            border-radius: 30px;
+        }
+
+        #bottom_category ul .on{
+            background-color: #3c65be;
+            color: #fff;
+        }
+
+        #bottom_category a{
+            text-decoration:none;
+            color: black;
+            font-size: 18px;
+        }
+
+        #bottom_category li:hover{
+            background-color: #3c65be;
+            color: #fff;
+        }
+
+                }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="outer">
+            <!-- ***상단부***-->
+            <div class="top_nav">
+                <!-- 왼쪽 -->
+                <div id="box-left">
+                    <a href="home.html">
+                        <img class="img_logo" src="image/logo.png" >
+                    </a>
+                </div>
+                <!-- 중앙 -->
+                <div id='box-center'>         
+                    <form>
+                        <input class="input_button" type="image" src="image/find.png" alt="Submit" >
+                        <input class = "input_box" type="text" placeholder="search">
+                    </form>               
+                </div>
+                <!-- 오른쪽 -->
+                <div id='box-right' style="font-family:'a옛날목욕탕L'">
+                    <ul>
+                        <li><a href="#" style="font-family:'a옛날목욕탕L'">회원가입</a></li>
+                        <li><a href="#" style="font-family:'a옛날목욕탕L'">로그인</a></li>
+                        <li><a ><img src="image/profile.png" width="30" height="30"></a>
+                            <ul><br>
+                                <li><a href="#" style="font-size:20px;"><img src="jiyoung_dev\img\avatar.png" width="25px" height="25px">프로필</a><br><br></li>
+
+                                <li><a id = "standard" href="#" style="font-size:20px;"><img src="jiyoung_dev\img\information (1).png" width="25px" height="25px">도움말</a></li>
+                                <li><a href="#" style="font-size:20px;"><img src="jiyoung_dev\img\settings.png" width="25px" height="25px">설정</a></li>
+                                <li><a href="#" style="font-size:20px;"><img src="jiyoung_dev\img\logout.png" width="25px" height="25px">로그아웃</a></li>
+                                <br><br>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--***메인 내용***-->
+            <div class="content">
+                <!--왼쪽 부분(nav)-->
+                <div class="left_part">
+                        <div class="row">
+                            <div class="column">
+                                <div class="about_us">
+                                    <h1>헬스미 헬프미 :)</h1>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <nav>
+                                    <ul class="left_nav">
+                                        <li class="left_nav_item">
+                                            <a href="home.html">
+                                                <!-- <img src="image/home.png" alt=""> -->
+                                                 Home</a> <!--홈화면으로 href-->
+                                        </li>
+                                        <li class="left_nav_item">
+                                            <a href="category.html">Category</a> <!--카테고리 화면으로 href-->
+                                        </li>
+                                        <li class="left_nav_item">
+                                            <a href="schedule.html">Schedule</a> <!--스케쥴 화면으로 href-->
+                                        </li>
+                                        <li class="left_nav_item">
+                                            <a href="setting.html">Setting</a> <!--설정 화면으로 href-->
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                </div>
+                <!--오른쪽 부분-->
+                <div class="right_part">
+                    <div class="gory">
+                        <div class="category_name">
+                            <h3>카테고리</h3>
+                            <br>
+                        </div>
+                        <div id="category_menu" style="font-family:'a옛날목욕탕L'">
+                            <ul>
+                                <li><a href="cate_trend.html">#트렌드 운동</a></li>
+                                <li><a href="#">#난이도별</a></li>
+                                <li><a href="#">#장르</a></li>
+                                <li><a href="#">#부위별로</a></li>
+                                <li><a href="#">#헬스기구사용법</a></li>
+                                <li><a href="#">#단기 다이어트</a></li>
+                                <li class="on" ><a href="#">#장소별</a></li>
+                            </ul>
+                        </div>
+                        <div id="bottom_category" style="font-family:'a옛날목욕탕L'">
+                            <ul><br><br>
+                                <li><a href="#">#회사에서</a></li>
+                                <li><a href="#">#집에서</a></li>
+                                <li><a href="#">#공원에서</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!--PART1 #트렌드운동 #플랭크운동-->
+                    <div class="cate">
+                        <div class="cate_name">
+                            <span style="display: inline-block; font-size: 23px;">#트렌드운동</span>
+                            <span style="display: inline-block; background-color: rgb(200, 162, 246, 0.71); font-size: 23px;">#플랭크운동</span>
+                            <br><br>
+
+                        </div>
+                        <div class="cate_box">
+                            <div id="video">
+                                <div class="video_thumnail">
+                                        <a href="https://youtu.be/iNdDN4GKtHk"><img src="http://i.ytimg.com/vi/iNdDN4GKtHk/maxresdefault.jpg" alt="운동영상"></a>
+                                </div>
+                                <div class="video_title">
+                                    <p>5분 플랭크!<br>
+                                    최대 2줄까지 표시 가능!</p><!--그 후에는 ...으로 줄여주세요~ -->
+                                </div>
+                            </div>
+                            <div id="video">
+                                <div class="video_thumnail">
+                                    <a href="https://youtu.be/oapL4ktZ3y0"><img src="http://i.ytimg.com/vi/oapL4ktZ3y0/maxresdefault.jpg" alt="운동영상"></a>
+                                </div>
+                                <div class="video_title">
+                                    <p>초보 플랭크!<br>
+                                        최대 2줄까지 표시 가능!</p> 
+                                </div>
+                            </div>
+                            <div id="video">
+                                    <div class="video_thumnail">
+                                        <a href="https://youtu.be/B--6YfhmBGc"><img src="http://i.ytimg.com/vi/B--6YfhmBGc/maxresdefault.jpg" alt="운동영상"></a>
+                                    </div>
+                                    <div class="video_title">
+                                        <p>가장 완벽한 플랭크 자세!<br>
+                                            The Fitness Marshall</p> 
+                                    </div>
+                            </div>
+                            <div id="video">
+                                    <div class="video_thumnail">
+                                        <a href="https://youtu.be/RKJHisWyejc"><img src="http://i.ytimg.com/vi/RKJHisWyejc/maxresdefault.jpg" alt="운동영상"></a>
+                                    </div>
+                                    <div class="video_title">
+                                        <p>하루 7분 전신운동으로 뱃살파괴!<br>
+                                            플랭크 30일 챌린지!</p> 
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr width="100%" size="0.5" color="#c7c7c7">
+                    <!--PART2 #트랜드운동 #PiYo-->
+                    <div class="cate">
+                        <div class="cate_name">
+                            <span style="display: inline-block; font-size: 23px;">#트렌드운동</span>
+                            <span style="display: inline-block; background-color: rgb(200, 162, 246, 0.71); font-size: 23px;">#PiYo</span>
+                            <br><br>
+
+                        </div>
+                        <div class="cate_box">
+                            <div id="video">
+                                <div class="video_thumnail">
+                                    <a href="https://www.youtu.be/KFZh2L_yKSI"><img src="http://i.ytimg.com/vi/KFZh2L_yKSI/maxresdefault.jpg"></a>
+                                </div>
+                                <div class="video_title">
+                                    <p>필라테스+요가! PiYO<br>
+                                        |가즈아~~~~</p> 
+                                </div>
+                            </div>
+                            <div id="video">
+                                <div class="video_thumnail">
+                                    <a href="https://youtu.be/UBMk30rjy0o"><img src="http://i.ytimg.com/vi/UBMk30rjy0o/maxresdefault.jpg" alt="운동영상"></a>
+                                </div>
+                                <div class="video_title">
+                                    <p>예예예 PiYO<br>
+                                    헬스 초보를 위한 완벽가이드</p> 
+                                </div>
+                            </div>
+                            <div id="video">
+                                    <div class="video_thumnail">
+                                        <a href="https://www.youtu.be/DYSsimWEyhM"><img src="http://i.ytimg.com/vi/DYSsimWEyhM/maxresdefault.jpg" alt="운동영상"></a>
+                                    </div>
+                                    <div class="video_title">
+                                        <p>PiYO<br>
+                                        운동방법 설명</p> 
+                                    </div>
+                            </div>
+                            <div id="video">
+                                    <div class="video_thumnail">
+                                        <a href="https://www.youtu.be/O8yKDEsXq1s"><img src="http://i.ytimg.com/vi/O8yKDEsXq1s/maxresdefault.jpg" alt="운동영상"></a>
+                                    </div>
+                                    <div class="video_title">
+                                        <p>PiYO<br>
+                                        라운드숄더 교정루틴</p> 
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr width="100%" size="0.5" color="#c7c7c7">
+                    <!--PART3 #트렌드운동 #타바타운동 -->
+                    <div class="cate">
+                        <div class="cate_name">
+                            <span style="display: inline-block; font-size: 23px;">#트렌드운동</span>
+                            <span style="display: inline-block; background-color: rgb(200, 162, 246, 0.71); font-size: 23px;">#타바타 운동</span>
+                            <br><br>
+
+                        </div>
+                            <div class="cate_box">
+                                <div id="video">
+                                    <div class="video_thumnail">
+                                        <a href="https://www.youtu.be/Vz4D3DXGyU0"><img src="http://i.ytimg.com/vi/Vz4D3DXGyU0/maxresdefault.jpg" alt="운동영상"></a>
+                                    </div>
+                                    <div class="video_title">
+                                        <p> 추다가 죽을뻔한<br>
+                                            2주에 10kg 빼기 춤</p> 
+                                    </div>
+                                </div>
+                                <div id="video">
+                                    <div class="video_thumnail">
+                                        <a href="https://www.youtu.be/BL8kwdj-XWU"><img src="http://i.ytimg.com/vi/BL8kwdj-XWU/maxresdefault.jpg" alt="운동영상"></a>
+                                    </div>
+                                    <div class="video_title">
+                                        <p>상식파괴&지방파괴<br>
+                                           전신운동</p> 
+                                    </div>
+                                </div>
+                                <div id="video">
+                                        <div class="video_thumnail">
+                                            <a href="https://www.youtu.be/5DeojduKXfI"><img src="http://i.ytimg.com/vi/5DeojduKXfI/maxresdefault.jpg" alt="운동영상"></a>
+                                            
+                                        </div>
+                                        <div class="video_title">
+                                            <p>채지방 태워버리기<br>
+                                            (feat.타바타)</p> 
+                                        </div>
+                                </div>
+                                <div id="video">
+                                        <div class="video_thumnail">
+                                            <a href="https://www.youtu.be/A8FhYFw5RAg"><img src="http://i.ytimg.com/vi/A8FhYFw5RAg/maxresdefault.jpg" alt="운동영상"></a>
+                                            
+                                        </div>
+                                        <div class="video_title">
+                                            <p>섹시 식스팩 2주만에 만들기<br>
+                                            -우왕</p> 
+                                        </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

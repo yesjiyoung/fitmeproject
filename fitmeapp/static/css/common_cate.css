@@ -1,0 +1,55 @@
+
+
+/* 오른쪽 전체 파트 */
+/* .right_part{
+    display: flex;
+
+    flex-direction: column;
+    height: calc(100%-110px);
+    width: 100%;
+    margin: 15px 0 0 70px ;
+    overflow-y: scroll;
+} */
+/* 끝 */
+.gory{
+    width: 100%;
+}
+
+
+#category_menu{
+    height: 50px;
+}
+
+#category_menu ul {
+    list-style: none;
+}
+
+#category_menu ul li{
+    float:left;
+    width:13.4%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(65, 105, 225, 0.4);
+    color: #fff;
+    /* border: 2px solid #4169e1; */
+    margin: 3px;
+    border-radius: 30px;
+}
+
+#category_menu ul .on{
+    background-color: #3c65be;
+    color: #fff;
+}
+
+#category_menu a{
+    text-decoration:none;
+    color: black;
+    font-size: 20px;
+}
+
+#category_menu li:hover{
+    background-color: #3c65be;
+    color: #fff;
+}
+

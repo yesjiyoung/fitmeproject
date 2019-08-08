@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common_cate.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="outer">
+            <!--상단부-->
+            <div class="top_nav">
+                <!-- <p>상단 네비게이션</p> -->
+                <!-- 왼쪽 -->
+                <div id="box-left">
+                    <a href="home.html">
+                        <img class="img_logo" src="{% static 'image/로고2.png'%}" >
+                    </a>
+                    
+                </div>
+                <!-- 중앙 -->
+                <div id='box-center'>         
+                    <form>
+                        <input class="input_button" type="image" src="{% static 'image/find.png'%}" alt="Submit" >
+                        <input class = "input_box" type="text" placeholder="search">
+                    </form>               
+                </div>
+                <!-- 오른쪽 -->
+                <div id='box-right'>
+                    <ul>
+                        <li><a href="{% url 'signup' %}">SignIn</a></li>
+                        <li><a href="#">login</a></li>
+                        
+                        <li><a href="#"><img src="{% static 'image/profile.png'%}" width="30" height="30"></a>
+                            <ul><br>
+                                <li><a href="#">Profile</a><br><br></li>
+
+                                <li><a id = "standard" href="#">Help</a></li>
+                                <li><a href="#">Setting</a></li>
+                                <li><a href="#">SignOut</a></li>
+                                <br><br>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <!--왼쪽 부분(nav)-->
+                <div class="left_part">
+                        <div class="row">
+                            <div class="column">
+                                <div class="about_us">
+                                    <h1>헬스미 헬프미 :)</h1>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <nav>
+                                    <ul class="left_nav">
+                                        <li class="left_nav_item">
+                                            <a href="{% url 'home' %}">
+                                                <!-- <img src="image/home.png" alt=""> -->
+                                                 Home</a> <!--홈화면으로 href-->
+                                        </li>
+                                        <li class="left_nav_item">
+                                            <a href="{% url 'cate_trend' %}">Category</a> <!--카테고리 화면으로 href-->
+                                        </li>
+                                        <li class="left_nav_item">
+                                            <a href="schedule.html">Schedule</a> <!--스케쥴 화면으로 href-->
+                                        </li>
+                                        <li class="left_nav_item">
+                                            <a href="setting.html">Setting</a> <!--설정 화면으로 href-->
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                </div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
