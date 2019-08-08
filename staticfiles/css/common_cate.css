@@ -67,7 +67,7 @@
     height: 100%;
     line-height: 50px;
     text-align: center;
-    background-color: rgb(65, 105, 225, 0.4);
+    background-color: rgba(225, 65, 87, 0.4);
     color: #fff;
     /* border: 2px solid #4169e1; */
     margin: 3px;
@@ -75,7 +75,7 @@
 }
 
 #bottom_category ul .on{
-    background-color: #3c65be;
+    background-color: #da3b78;
     color: #fff;
 }
 
@@ -86,7 +86,7 @@
 }
 
 #bottom_category li:hover{
-    background-color: #3c65be;
+    background-color: #da3b78;
     color: #fff;
 }
 

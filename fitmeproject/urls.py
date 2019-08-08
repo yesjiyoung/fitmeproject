@@ -34,5 +34,19 @@ urlpatterns = [
     path('logout/', fitmeapp.views.logout, name='logout'),
     path('signup/', fitmeapp.views.signup, name='signup'),
     path('cate_trend/', fitmeapp.views.cate_trend, name='cate_trend'),
+    path('cate_place/', fitmeapp.views.cate_place, name='cate_place'),
+    path('default_detail/', fitmeapp.views.default_detail, name='default_detail'),
+    path('detail/', fitmeapp.views.detail, name='detail'),
+    path('schedule/', fitmeapp.views.schedule, name='schedule'),
+    path('help/', fitmeapp.views.help, name='help'),
+    path('profile/', fitmeapp.views.profile, name='profile'),
+    path('setting/', fitmeapp.views.setting, name='setting'),
+
+
+
+
+
+
+
     # path('accounts/', include('allauth.urls')),
 ]

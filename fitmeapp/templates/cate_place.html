@@ -1,86 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>뚜비두밥메인페이지</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/common_cate.css">
+{% extends 'base.html' %}
+{%block title %}-CATE{% endblock %}
+{% block content %}
 
-
-    
-</head>
-<body>
-    <div class="container">
-        <div class="outer">
-            <!-- ***상단부***-->
-            <div class="top_nav">
-                <!-- 왼쪽 -->
-                <div id="box-left">
-                    <a href="home.html">
-                        <img class="img_logo" src="image/logo.png" >
-                    </a>
-                </div>
-                <!-- 중앙 -->
-                <div id='box-center'>         
-                    <form>
-                        <input class="input_button" type="image" src="image/find.png" alt="Submit" >
-                        <input class = "input_box" type="text" placeholder="search">
-                    </form>               
-                </div>
-                <!-- 오른쪽 -->
-                <div id='box-right' style="font-family:'a옛날목욕탕L'">
-                    <ul>
-                        <li><a href="#" style="font-family:'a옛날목욕탕L'">회원가입</a></li>
-                        <li><a href="#" style="font-family:'a옛날목욕탕L'">로그인</a></li>
-                        <li><a ><img src="image/profile.png" width="30" height="30"></a>
-                            <ul><br>
-                                <li><a href="#" style="font-size:20px;"><img src="jiyoung_dev\img\avatar.png" width="25px" height="25px">프로필</a><br><br></li>
-
-                                <li><a id = "standard" href="#" style="font-size:20px;"><img src="jiyoung_dev\img\information (1).png" width="25px" height="25px">도움말</a></li>
-                                <li><a href="#" style="font-size:20px;"><img src="jiyoung_dev\img\settings.png" width="25px" height="25px">설정</a></li>
-                                <li><a href="#" style="font-size:20px;"><img src="jiyoung_dev\img\logout.png" width="25px" height="25px">로그아웃</a></li>
-                                <br><br>
-                                
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--***메인 내용***-->
-            <div class="content">
-                <!--왼쪽 부분(nav)-->
-                <div class="left_part">
-                        <div class="row">
-                            <div class="column">
-                                <div class="about_us">
-                                    <h1>헬스미 헬프미 :)</h1>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <nav>
-                                    <ul class="left_nav">
-                                        <li class="left_nav_item">
-                                            <a href="home.html">
-                                                <!-- <img src="image/home.png" alt=""> -->
-                                                 Home</a> <!--홈화면으로 href-->
-                                        </li>
-                                        <li class="left_nav_item">
-                                            <a href="category.html">Category</a> <!--카테고리 화면으로 href-->
-                                        </li>
-                                        <li class="left_nav_item">
-                                            <a href="schedule.html">Schedule</a> <!--스케쥴 화면으로 href-->
-                                        </li>
-                                        <li class="left_nav_item">
-                                            <a href="setting.html">Setting</a> <!--설정 화면으로 href-->
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                </div>
-                <!--오른쪽 부분-->
-                <div class="right_part">
+<!--오른쪽 부분-->
+<div class="right_part">
                     <div class="gory">
                         <div class="category_name">
                             <h3>카테고리</h3>
@@ -252,9 +175,6 @@
 
                             </div>
                         </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+</div>
+
+{% endblock %}

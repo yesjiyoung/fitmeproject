@@ -1,88 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>영상상세페이지</title>
-    <style>
-    </style>
-    <link rel="stylesheet" type="text/css" href="css/detail.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <!-- 캘린더 관련 부분 -->
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/simple-calendar.css">
-    <!-- //end -->
-
-
-</head>
-
-<body>
+{% extends 'base2.html' %}
+{% load static %}
+{%block title %}-CATE{% endblock %}
+{% block content %}
     <!--
     [0802 AM 01:57 detail.html설명]
     현재 디테일페이지는 : home에 '추다가 죽을뻔한 2주에 10kg빼기 춤'에 대한 디테일 페이지입니다! -> 근데 이 영상 iframe이 지원 안되요.... 왜지????
     백에서 다룰때에는 : 영상url을 넘겨서 detail페이지 .main_video 부분을 채워야할 것 같아요!! -->
 
 
-    <div class="container">
-        <div class="outer">
-            <!--상단부-->
-            <div class="top_nav">
-                <!-- 왼쪽 -->
-                <div id="box-left">
-                    <a href="home.html">
-                        <img class="img_logo" src="image/로고2.png">
-                    </a>
 
-                </div>
-                <!-- 중앙 -->
-                <div id='box-center'>
-                    <form>
-                        <input class="input_button" type="image" src="image/find.png" alt="Submit">
-                        <input class="input_box" type="text" placeholder="search">
-                    </form>
-                </div>
-                <!-- 오른쪽 -->
-                <div id='box-right'>
-                    <ul>
-                        <li>SignIn</li>
-                        <li>SignOut</li>
-                        <li><a><img src="image/profile.png" width="30" height="30"></a></li>
-                </div>
-            </div>
-            <div class="content">
-                <!--왼쪽 부분(nav)-->
-                <div class="left_part">
-                    <div class="row">
-                        <div class="column">
-                            <div class="about_us">
-                                <h1>헬스미 헬프미 :)</h1>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <nav>
-                                <ul class="left_nav">
-                                    <li class="left_nav_item">
-                                        <a href="home.html">
-                                            <!-- <img src="image/home.png" alt=""> -->
-                                            Home</a>
-                                        <!--홈화면으로 href-->
-                                    </li>
-                                    <li class="left_nav_item">
-                                        <a href="cate_trend.html">Category</a>
-                                        <!--카테고리 화면으로 href-->
-                                    </li>
-                                    <li class="left_nav_item">
-                                        <a href="schedule.html">Schedule</a>
-                                        <!--스케쥴 화면으로 href-->
-                                    </li>
-                                    <li class="left_nav_item">
-                                        <a href="setting.html">Setting</a>
-                                        <!--설정 화면으로 href-->
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
                 <!--오른쪽 부분-->
                 <div class="right_part">
                     <div class="main_video">
@@ -217,14 +143,11 @@
 
 
                 </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- 캘린더 구현 관련 script부분 -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="js/jquery.simple-calendar.js"></script>
+    <script src="{% static 'js/jquery.simple-calendar.js' %}"></script>
     <!-- //end -->
     <script>
         $(document).ready(function () {
@@ -243,6 +166,4 @@
             });
         });
     </script>
-
-</body>
-</html>
+{% endblock %}

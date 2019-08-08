@@ -58,3 +58,30 @@ def signup(request):
 
 def cate_trend(request):
     return render(request, 'cate_trend.html')
+
+
+    
+
+#추가합니다.
+def cate_place(request):
+    return render(request, 'cate_place.html')
+
+def default_detail(request):
+    return render(request, 'default_detail.html')
+
+def detail(request):
+    return render(request, 'detail.html')
+
+def schedule(request):
+    return render(request, 'schedule.html')
+
+def help(request):
+    return render(request, 'section_set_help.html')
+
+def profile(request):
+    return render(request, 'section_set_profile.html')
+
+def setting(request):
+    return render(request, 'section_set_setting.html')
+
+
