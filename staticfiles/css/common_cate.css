@@ -53,3 +53,41 @@
     color: #fff;
 }
 
+#bottom_category{
+    height: 50px;
+}
+
+#bottom_category ul {
+    list-style: none;
+}
+
+#bottom_category ul li{
+    float:left;
+    width:10%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(65, 105, 225, 0.4);
+    color: #fff;
+    /* border: 2px solid #4169e1; */
+    margin: 3px;
+    border-radius: 30px;
+}
+
+#bottom_category ul .on{
+    background-color: #3c65be;
+    color: #fff;
+}
+
+#bottom_category a{
+    text-decoration:none;
+    color: black;
+    font-size: 18px;
+}
+
+#bottom_category li:hover{
+    background-color: #3c65be;
+    color: #fff;
+}
+
+       
