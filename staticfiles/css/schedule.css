@@ -1,0 +1,126 @@
+/* 오른쪽 전체 파트 */
+.right_part{
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    /* width: 900px; */
+    height: calc(100%-110px);
+    width: 100%;
+    margin: 15px 0 0 70px ;
+    overflow-y: scroll;
+    }
+    /* --> */
+    .function{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    border-right: 5px dotted black;
+    }
+    .container {
+        margin-bottom: 20px;
+    }
+
+
+    /* 체크리스트 */
+    .check-list{
+    width: 300px;
+    padding: 20px 40px;
+    background-color:#a586d1;
+    /* background: url(../hyeseon_dev/checklist/bg.png) no-repeat; */
+    background-size: cover;
+    }
+
+    /* .check-list h2{
+    color:white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 0;
+    } */
+
+    .task{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    cursor: pointer;
+    }
+
+    .task input{
+    position: absolute;
+    visibility: hidden;
+    }
+
+    .task i{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    margin-right: 14px;
+    color: transparent;
+    }
+
+    .text{
+    font-size: 18px;
+    color: #fff;
+    }
+
+    .task input:checked ~ i{
+    color: #e74c3c;
+    }
+
+    .task input:checked ~ .text{
+    text-decoration: line-through;
+    color: #e74c3c;
+    }
+
+    /* 체크리스트 끝 */
+
+    /* 전체시간 */
+    .total_time{
+        background-color: #8b79af;
+        border-radius: 70px;
+        margin-bottom:52px;
+        padding: 0;
+        border-radius: 1px solid black;
+    }
+    .total_time table {
+        width: 300px;
+        height: 100px;
+        padding-bottom: 10px;
+    }
+
+    td{
+        padding: 0;
+        margin: 0;
+    }
+
+    .timenum{
+        display: flex;
+        align-content: center; /* 세로에서 요소를 가운데 배치하겠다 */
+        justify-content: center; /* 가로에서 요소를 가운데 배치하겠다 */
+        font-size: 50px;
+        color: white;
+        padding-left: 42px;
+        margin-bottom: 10px;
+        height: 60px;
+    }
+    .num {
+        margin: 0 20px 0 20px;
+        padding: 0 auto;
+        height: 80px;
+        width: 60px;
+        border: 0;
+        color: white;
+        background: #8b79af;
+        font-size:50px;
+    }
+    /* --끝-- */
+
+    .graph{
+    width: 1000px;
+    height: 600px;
+    padding: 110px 100px 0 100px;
+    }
