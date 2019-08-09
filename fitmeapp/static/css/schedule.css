@@ -1,10 +1,10 @@
 /* 오른쪽 전체 파트 */
-.right_part{
+.schedule_right_part{
     /* justify-content: center; */
     display: flex;
     flex-direction: row;
     /* width: 900px; */
-    height: calc(100%-110px);
+    height: calc(100% - 110px);
     width: 100%;
     margin: 15px 0 0 70px ;
     overflow-y: scroll;

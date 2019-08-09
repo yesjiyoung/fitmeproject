@@ -31,30 +31,35 @@
     line-height: 50px;
     text-align: center;
     background-color: rgb(65, 105, 225, 0.4);
-    color: #fff;
+    color: black;
     /* border: 2px solid #4169e1; */
     margin: 3px;
     border-radius: 30px;
 }
-
-#category_menu ul .on{
+/* 파랑색 클릭하면 찐해진다 */
+#category_menu ul .top_on{
     background-color: #3c65be;
-    color: #fff;
+    color: white;
 }
 
-#category_menu a{
+#category_menu li{
     text-decoration:none;
     color: black;
     font-size: 20px;
 }
 
-#category_menu li:hover{
-    background-color: #3c65be;
-    color: #fff;
-}
+
+
+
+
+
+
+
 
 #bottom_category{
     height: 50px;
+    display: flex;
+    flex-direction : column;
 }
 
 #bottom_category ul {
@@ -68,26 +73,26 @@
     line-height: 50px;
     text-align: center;
     background-color: rgba(225, 65, 87, 0.4);
-    color: #fff;
+    color:black;
     /* border: 2px solid #4169e1; */
     margin: 3px;
     border-radius: 30px;
 }
 
-#bottom_category ul .on{
+/* 핑크색 클릭하면 찐해진다 */
+#bottom_category ul .sub_on{
     background-color: #da3b78;
     color: #fff;
 }
 
-#bottom_category a{
+#bottom_category li{
     text-decoration:none;
     color: black;
     font-size: 18px;
 }
-
+/*
 #bottom_category li:hover{
     background-color: #da3b78;
     color: #fff;
-}
+} */
 
-       
