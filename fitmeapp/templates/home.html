@@ -9,15 +9,20 @@
                             <h3>오늘의 영상</h3>
                         </div>
                         <div class="cate_box">
-                            <div id="video">
-                                <div class="video_thumnail">
-                                        <a href="https://www.youtube.com/embed/VVn5IUM8sms"><img src="http://i.ytimg.com/vi/VVn5IUM8sms/maxresdefault.jpg" alt="운동영상"></a>
-                                </div>
-                                <div class="video_title">
-                                    <p>다노 레전드 스트레칭<br>
-                                    최대 2줄까지 표시 가능!</p><!--그 후에는 ...으로 줄여주세요~ -->
-                                </div>
-                            </div>
+                            <form action="{% url 'detail' %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit">
+                                    <div id="video">
+                                        <div class="video_thumnail">
+                                            <img src="http://i.ytimg.com/vi/VVn5IUM8sms/maxresdefault.jpg" alt="운동영상">
+                                        </div>
+                                        <div class="video_title">
+                                            <p>다노 레전드 스트레칭 최대 2줄까지 표시 가능!</p>
+                                        </div>
+                                        <input type="hidden" name="hi" value="VVn5IUM8sms">
+                                    </div>
+                                </button>
+                            </form>
                             <div id="video">
                                 <div class="video_thumnail">
                                     <a href="https://www.youtube.com/embed/VNQpP6C1fJg"><img src="http://i.ytimg.com/vi/VNQpP6C1fJg/maxresdefault.jpg" alt="운동영상"></a>

@@ -12,7 +12,7 @@
                 <!--오른쪽 부분-->
                 <div class="right_part">
                     <div class="main_video">
-                        <iframe width="956" height="538" src="https://www.youtube.com/embed/Pgel3ur1Acg" frameborder="0"
+                        <iframe width="956" height="538" src="https://www.youtube.com/embed/{{ url }}" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                         <!-- <iframe width="956" height="538" src="https://www.youtube.com/embed/P8CDv4dgHEM" frameborder="0"
@@ -26,6 +26,17 @@
                             <div class="main_video_title">
                                 <p>영상제목이 들어갈 자리입니다. 글자가 쭈우우욱 써질거에요~~</p>
                             </div>
+                            {% for Like in likes %}
+                                {% if Like.v_name == url %}
+                                    {{ check = check + 1 }}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if check > 0 %}
+                                <button>좋아요 취소</button>
+                            {% else %}
+                                <button>좋아요</button>
+                           {% endif %}
                             <div class="heart"> <!-- 내가 픽한 영상에 들어가게 될 영상을 고르는 하트 버튼! 아직 mypick()함수 구현 안됨-->
                                 <input class="mypick" type="button" name="heart" onclick="mypick()">
                             </div>

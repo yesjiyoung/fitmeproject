@@ -44,6 +44,7 @@ urlpatterns = [
     path('correct/', fitmeapp.views.correct, name='correct'),
     path('uncorrect/', fitmeapp.views.uncorrect, name='uncorrect'),
     path('unlog/', fitmeapp.views.unlog, name='unlog'),
+    path('test/', fitmeapp.views.test, name='test'),
 
     # path('accounts/', include('allauth.urls')),
 ]

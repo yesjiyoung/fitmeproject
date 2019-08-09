@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%block title %}-CATE{% endblock %}
+{% block content %}
+
+
+    {% for like in Likes %}
+        <form action="{% url 'detail' %}" method="POST">
+
+        {% csrf_token %}
+
+        <button type="submit">
+            <div id="video">
+                <div class="video_thumnail">
+                    <img src="http://i.ytimg.com/vi/{{ like.v_name }}/maxresdefault.jpg" alt="운동영상">
+                </div>
+                <div class="video_title">
+                    <p>{{ like.title }}</p>
+                </div>
+                <input type="hidden" name="hi" value="{{ like.v_name }}">
+            </div>
+        </button>
+        </form>
+    {% endfor %}
+
+{% endblock %}
+

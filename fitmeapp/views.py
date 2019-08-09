@@ -8,6 +8,7 @@ from django.shortcuts import render, redirect
 
 from django.shortcuts import render
 from .models import Thumbnail
+from .models import Likevideo
 # Create your views here.
 
 # 추가
@@ -128,7 +129,12 @@ def default_detail(request):
 
 
 def detail(request):
-    return render(request, 'detail.html')
+    like = Likevideo.objects.all()
+    check = 0
+    if request.method == 'POST' :
+        url = request.POST['hi']
+
+    return render(request, 'detail.html', {'url':url, 'likes':like, 'check':check})
 
 
 def schedule(request):
@@ -145,3 +151,9 @@ def profile(request):
 
 def setting(request):
     return render(request, 'section_set_setting.html')
+
+
+def test(request):
+    likes = Likevideo.objects.all()
+
+    return render(request, 'test.html', {'Likes':likes})
