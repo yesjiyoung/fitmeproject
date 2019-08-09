@@ -24,19 +24,9 @@
                             </div>
                             
                             <div class="main_video_title">
-                                <p>영상제목이 들어갈 자리입니다. 글자가 쭈우우욱 써질거에요~~</p>
+                                <p>디노 레전드 스트레칭!</p>
                             </div>
-                            {% for Like in likes %}
-                                {% if Like.v_name == url %}
-                                    {{ check = check + 1 }}
-                                {% endif %}
-                            {% endfor %}
 
-                            {% if check > 0 %}
-                                <button>좋아요 취소</button>
-                            {% else %}
-                                <button>좋아요</button>
-                           {% endif %}
                             <div class="heart"> <!-- 내가 픽한 영상에 들어가게 될 영상을 고르는 하트 버튼! 아직 mypick()함수 구현 안됨-->
                                 <input class="mypick" type="button" name="heart" onclick="mypick()">
                             </div>
