@@ -28,7 +28,9 @@ class T_category(models.Model):
         return self.Thirdcate
 
 class Thumbnail(models.Model):
-    cate_number = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    f_cate_number = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    s_cate_number = models.ForeignKey(S_category, on_delete=models.CASCADE, null=True)
+    t_cate_number = models.ForeignKey(T_category, on_delete=models.CASCADE, null=True)
     urlId = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     firstCate = models.CharField(max_length=100)
@@ -42,7 +44,7 @@ class Thumbnail(models.Model):
         ordering = ['-created']
 
     def __str__(self):
-        return self.videoName
+        return self.title
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -52,15 +54,17 @@ class Profile(models.Model):
 class Likevideo(models.Model) :
     userid = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     v_name = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, default='')
 
     def __str__(self):
-        return self.v_name
+        return self.title
 
 class Infovideo(models.Model) :
     v_id = models.ForeignKey(Likevideo, on_delete=models.CASCADE, null=True)
     v_name = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, default='')
     timer = models.TextField()
     calender = models.TextField()
 
     def __str__(self):
-        return self.v_name
+        return self.title
