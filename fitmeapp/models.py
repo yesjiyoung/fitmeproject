@@ -10,6 +10,22 @@ class Category(models.Model):
     def __str__(self):
         return self.categorys
 
+
+class S_category(models.Model):
+    Secondcate = models.CharField(max_length=20, unique=True)
+    CateNum = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.Secondcate
+
+
+class T_category(models.Model):
+    Thirdcate = models.CharField(max_length=20, unique=True)
+    S_CateNum = models.ForeignKey(S_category, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.Thirdcate
+
 class Thumbnail(models.Model):
     cate_number = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     urlId = models.CharField(max_length=100)
