@@ -45,7 +45,7 @@ class Thumbnail(models.Model):
         return self.videoName
 
 
-    
+
 
 
 
