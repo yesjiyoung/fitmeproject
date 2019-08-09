@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{%block title %}-CATE{% endblock %}
+{% block content %}
+
+<h3 class='signup'>회원가입하세요</h3>
+    
+
+    <form method="POST" action="{% url 'signup' %}">
+      {% csrf_token %}
+      <!-- username -->
+      <div>
+        <h1>사용자이름</h1>
+        <input name="username" type="username" class="signup_form">  
+      </div>
+
+      <!-- password1 -->
+      <div>
+        <h1>비밀번호</h1>
+        <input name="password1" type="password" class="signup_form">  
+      </div>
+
+      <!-- password2 -->
+      <div>
+        <h1>비밀번호확인</h1>
+        <input name="password2" type="password" class="signup_form"> 
+      </div>
+        <input type="submit" value="회원가입하기">
+
+
+      <div>
+        <!-- 설문조사 -->
+        <!-- <h2>설문조사 진행</h2>
+        <div>
+          <h2>Q1.성별<input></h2>
+          <h2>Q2.나이<input></h2>
+          <h2>Q1.직업<input></h2>
+        </div>
+      </div>
+    </form> -->
+
+
+{% endblock %}

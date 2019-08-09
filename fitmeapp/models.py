@@ -2,6 +2,7 @@
 
 # # Create your models here.
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
@@ -39,14 +40,27 @@ class Thumbnail(models.Model):
 
     class Meta:
         ordering = ['-created']
-    
-    
+
     def __str__(self):
         return self.videoName
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    userpk = models.AutoField(primary_key=True)
 
 
+class Likevideo(models.Model) :
+    userid = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    v_name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.v_name
 
+class Infovideo(models.Model) :
+    v_id = models.ForeignKey(Likevideo, on_delete=models.CASCADE, null=True)
+    v_name = models.CharField(max_length=200)
+    timer = models.TextField()
+    calender = models.TextField()
 
-    
+    def __str__(self):
+        return self.v_name
