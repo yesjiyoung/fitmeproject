@@ -1,0 +1,1 @@
+web: gunicorn fitmeproject.wsgi --log-file -
