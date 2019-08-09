@@ -26,6 +26,7 @@ def cate_trend(request):
     category = 'trend'
     urlid = 'dd'
     cate_real_name = request.GET.get('sport_category')
+    
 
     for thumbnail in thumbnails:
         if cate_real_name == 'trend':
@@ -34,7 +35,7 @@ def cate_trend(request):
                 checkname = 1
                 subcategory = '#플랭크'
                 urlid = thumbnail.urlId
-                category_filter = thumbnails.objects.filter(cate_number=checkname)
+                category_filter = thumbnails.objects.filter(CateName)
             elif thumbnail.cateDetailName == 'piyo':
                 checkname = 2
                 subcategory = '#PiYo'
