@@ -1,1 +1,142 @@
-<h1>스케쥴 페이지입니다</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+               
+<!--오른쪽 부분-->
+<div class="right_part">
+                    <div class="function">
+                        <h2>💛내가 픽한 영상💛</h2>
+                        <div class="pick container">
+                            <ul>
+                                <li>픽한영상1</li>
+                                <li>픽한영상2</li>
+                                <li>픽한영상3</li>
+                            </ul>
+                        </div>
+
+                        <h2>나의 목표</h2>
+                        <div class="check-list container">
+                            <label class="task">
+                                <input type="checkbox">
+                                <i class="fas fa-check"></i>
+                                <span class="text">저녁 8시 이후에 금식</span>
+                            </label>
+
+                            <label class="task">
+                                <input type="checkbox">
+                                <i class="fas fa-check"></i>
+                                <span class="text">팔뚝살 빼기</span>
+                            </label>
+
+                            <label class="task">
+                                <input type="checkbox">
+                                <i class="fas fa-check"></i>
+                                <span class="text">매일 물 2L씩 마시기</span>
+                            </label>
+
+                            <label class="task">
+                                <input type="checkbox">
+                                <i class="fas fa-check"></i>
+                                <span class="text">Play games</span>
+                            </label>
+                        </div>
+
+                        <h2>총 운동시간</h2>
+                        <div class="total_time container">
+                            <form name="display">
+                                <table class="table">
+                                    <!-- style="background-color: #8b79af; border-radius: 50px; width: 300px; height: 100px;"> -->
+                                    <tbody>
+                                        <!-- <tr> <td class="comment" colspan="3" style="text-align: center; font-size: 23px; padding-top:10px;"> 운동 시작한지 </td></tr> -->
+                                        <tr>
+                                            <td colspan="3" style="justify-content: center;">
+                                                <div class="timenum">
+                                                    <!-- style="font-size:35px; color:white; border-radius: 100px;"> -->
+                                                    <input class="num" type="text" name="minutes" value="00" size="3">
+                                                    <!-- style="height:30px;border:0;font-size:40px;width:70px;color:white;background:#8b79af; border-radius: 100px;"> -->
+                                                    :
+                                                    <input class="num" type="text" name="seconds" value="00" size="3">
+                                                    <!-- style="height:30px;border:0;font-size:40px;width:70px;color:white;background:#8b79af;border-radius: 100px;"> -->
+                                                    :
+                                                    <input class="num milsec" type="text" name="milsecs" value="0"
+                                                        size="3">
+                                                    <!-- style="height:30px;border:0;font-size:40px;width:70px;color:white;background:#8b79af; border-radius: 100px;"> -->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+
+                            <!-- <ul>
+                                <li>픽한영상1</li>
+                                <li>픽한영상2</li>
+                                <li>픽한영상3</li>
+                            </ul>
+                        </div> -->
+                        </div>
+                    </div>
+
+                    <div class="graph">
+                        <div class="under_div">
+                            <h2>※요일별 데이터</h2>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+                            <canvas id="myChart"></canvas> 
+                        </div>
+                    </div>
+                    <script>
+                        // 우선 컨텍스트를 가져옵니다. 
+                        var ctx = document.getElementById("myChart").getContext('2d');
+                        /*
+                        - Chart를 생성하면서, 
+                        - ctx를 첫번째 argument로 넘겨주고, 
+                        - 두번째 argument로 그림을 그릴때 필요한 요소들을 모두 넘겨줍니다. 
+                        */
+                        var myChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ["월", "화", "수", "목", "금", "토", "일"],
+                                datasets: [{
+                                    label: '# of Votes',
+
+                                    /*아래 data리스에 타이머 시간이 요일별로 차곡차곡 기록될 예정입니다!*/
+                                    data: [12, 19, 3, 5, 2, 3, 10],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+                                        'rgba(255, 206, 86, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(123, 117, 132, 0.2)',
+
+
+
+                                    ],
+                                    borderColor: [
+                                        'rgba(255,99,132,1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)',
+                                        'rgba(123, 117, 132, 1)',
+
+                                    ],
+                                    borderWidth: 2
+                                }]
+                            },
+                            options: {
+                                maintainAspectRatio: true, // default value. false일 경우 포함된 div의 크기에 맞춰서 그려짐.
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero:true
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                        </script>
+</div>
+{% endblock %}
