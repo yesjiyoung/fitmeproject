@@ -9,32 +9,33 @@
                             <h3>오늘의 영상</h3>
                         </div>
                         <div class="cate_box">
+                                    <div id="video">
+
                             <form action="{% url 'detail' %}" method="POST">
                                 {% csrf_token %}
-                                <button type="submit">
-                                    <div id="video">
                                         <div class="video_thumnail">
+                                            <button type="submit">
                                             <img src="http://i.ytimg.com/vi/VVn5IUM8sms/maxresdefault.jpg" alt="운동영상">
+                                            </button>
                                         </div>
                                         <div class="video_title">
-                                            <p>다노 레전드 스트레칭 최대 2줄까지 표시 가능!</p>
+                                            <p>다노 레전드 스트레칭!<br>골반교정스트레칭</p>
                                         </div>
                                         <input type="hidden" name="hi" value="VVn5IUM8sms">
+                                        </form>
                                     </div>
-                                </button>
-                            </form>
-                            <button>
+
                             <div id="video">
                                 <div class="video_thumnail">
+                                    <button>
                                     <a href="https://www.youtube.com/embed/VNQpP6C1fJg"><img src="http://i.ytimg.com/vi/VNQpP6C1fJg/maxresdefault.jpg" alt="운동영상"></a>
+                                    </button>
                                 </div>
                                 <div class="video_title">
                                     <p>땅끄부부 30분 운동<br>
                                         최대 2줄까지 표시 가능!</p> 
                                 </div>
                             </div>
-                            </button>
-                            <button>
                             <div id="video">
                                     <div class="video_thumnail">
                                         <a href="https://youtu.be/f6wm2g682JM"><img src="http://i.ytimg.com/vi/f6wm2g682JM/maxresdefault.jpg" alt="운동영상"></a>
@@ -44,8 +45,6 @@
                                             The Fitness Marshall</p> 
                                     </div>
                             </div>
-                            </button>
-                            <button>
                             <div id="video">
                                     <div class="video_thumnail">
                                         <a href="https://youtu.be/7BF4L54IOBs"><img src="http://i.ytimg.com/vi/7BF4L54IOBs/maxresdefault.jpg" alt="운동영상"></a>
@@ -55,7 +54,6 @@
                                             최대 2줄까지 표시 가능!</p> 
                                     </div>
                             </div>
-                            </button>
                         </div>
                     </div>
                     <hr width="100%" size="0.5" color="#c7c7c7">
