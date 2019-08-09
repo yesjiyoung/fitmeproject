@@ -3,7 +3,7 @@
 {% block content %}
 
 '로그인페이지'
-<form class="loginform" method="POST" action="{% url 'home' %}">
+<form class="loginform" method="POST" action="{% url 'login' %}">
         {% csrf_token %}
         <div>
           <!--<label for="exampleInputEmail1">사용자이름</label>-->
